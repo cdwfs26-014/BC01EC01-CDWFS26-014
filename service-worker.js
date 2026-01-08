@@ -26,18 +26,27 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('fetch', event => {
-    event.respondWith(
-        caches.match(event.request).then(cached => {
-            const fetchPromise = fetch(event.request).then(networkResponse => {
-                caches.open(CACHE_NAME).then(cache => {
-                    cache.put(event.request, networkResponse.clone());
-                });
-                return networkResponse;
-            });
-            return cached || fetchPromise;
-        })
-    );
+    event.respondWith((async () => {
+        const cachedResponse = await caches.match(event.request);
+        if (cachedResponse) {
+            return cachedResponse;
+        }
+
+        try {
+            const networkResponse = await fetch(event.request);
+            const responseClone = networkResponse.clone();
+
+            const cache = await caches.open(CACHE_NAME);
+            await cache.put(event.request, responseClone);
+
+            return networkResponse;
+        } catch (err) {
+            console.error('Fetch failed:', err);
+            return caches.match('index.html');
+        }
+    })());
 });
+
 
 self.addEventListener('activate', event => {
     event.waitUntil(
