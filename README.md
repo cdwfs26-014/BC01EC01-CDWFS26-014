@@ -13,3 +13,4 @@ Objectif : site vitrine moderne, accessible et responsive avec formulaire AJAX e
 - `main.js` – Scripts pour menu mobile et gestion du formulaire
 - `manifest.json` & `service-worker.js` – PWA
 
+CDWFS26-014
