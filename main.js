@@ -96,13 +96,13 @@ const GestionAvis = {
     afficherTousAvis() {
         this.listeAvis.innerHTML = '';
         const avisStockes = JSON.parse(localStorage.getItem('avis')) || [];
-
+    
         if (avisStockes.length === 0) {
             this.listeAvis.innerHTML = '<p>Aucun avis pour le moment. Soyez le premier à donner le vôtre !</p>';
             return;
         }
-
-        avisStockes.slice().reverse().forEach(a => {
+    
+        avisStockes.slice(-5).reverse().forEach(a => {
             const article = document.createElement('article');
             article.className = 'avis';
             article.innerHTML = `
@@ -113,7 +113,7 @@ const GestionAvis = {
             `;
             this.listeAvis.appendChild(article);
         });
-    },
+    }
 
     afficherMessage(texte, type) {
         this.zoneMessage.textContent = texte;
