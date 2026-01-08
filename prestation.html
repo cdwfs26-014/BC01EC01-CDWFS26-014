@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Prestations | Devis Rénovation Concept</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Découvrez toutes les prestations de Devis Rénovation Concept et consultez les avis clients.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="img/flavicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#contenu" class="skip-link">Aller au contenu</a>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <h1 class="logo">Devis Rénovation Concept</h1>
+
+        <nav class="main-nav" id="menu" aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="prestation.html" aria-current="page">Prestations</a></li>
+                <li><a href="index.html#tarifs">Tarifs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button class="burger"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+                aria-controls="menu">
+            ☰
+        </button>
+    </div>
+</header>
+
+<main id="contenu">
+
+    <section class="services">
+        <div class="container">
+            <h2>Nos prestations</h2>
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <img src="img/smiley.png" alt="Peinture intérieure">
+                    <h3>Peinture Intérieure</h3>
+                    <p>Confiez-nous la peinture intérieure de votre habitat pour une ambiance chaleureuse et harmonieuse. 
+                    Partenaire des marques françaises THÉODORE et UNIKALO, nos travaux sont garantis 10 ans.</p>
+                </article>
+
+                <article class="service-card">
+                    <img src="img/star.png" alt="Isolation thermique">
+                    <h3>Isolation Thermique</h3>
+                    <p>Améliorez le confort de votre logement et réduisez vos dépenses énergétiques avec notre expertise en isolation. 
+                    Nous utilisons également des peintures thermo-isolantes reconnues CEE.</p>
+                </article>
+
+                <article class="service-card">
+                    <img src="img/thunder.png" alt="Enduits de qualité">
+                    <h3>Enduits de Qualité</h3>
+                    <p>Finitions impeccables et durables avec nos enduits professionnels. 
+                    Rénovation performante et ratissage en enduit Acti-Pro dès 15€ HT/m².</p>
+                </article>
+
+                <article class="service-card">
+                    <img src="img/globe.png" alt="Ravalement et rénovation">
+                    <h3>Ravalement & Rénovation</h3>
+                    <p>Redonnez vie à vos façades et murs. Travaux clé en main pour votre habitat avec devis personnalisé et rapide. 
+                    Nos prix pour la rénovation varient selon les prestations : à partir de 14€ HT/m² ou 45€ HT/heure.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="avis" id="avis">
+        <div class="container">
+            <h2>Laisser un avis</h2>
+
+            <form id="avis-form" novalidate aria-describedby="form-message">
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="ville">Ville</label>
+                    <input type="text" id="ville" name="ville" aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="avis-text">Avis</label>
+                    <textarea id="avis-text" name="avis" rows="4" aria-required="true"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="note">Note</label>
+                    <select id="note" name="note" aria-required="true">
+                        <option value="">Choisir une note</option>
+                        <option value="5">★★★★★</option>
+                        <option value="4">★★★★</option>
+                        <option value="3">★★★</option>
+                        <option value="2">★★</option>
+                        <option value="1">★</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    Ajouter mon avis
+                </button>
+
+                <p id="form-message" role="alert" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+
+    <section class="avis-liste">
+        <div class="container" id="avis-liste">
+            <h2>Avis clients</h2>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+    <div class="container">
+        <address>
+            <p>Devis Rénovation Concept</p>
+            <p>Téléphone : <a href="tel:+33123456789">01 23 45 67 89</a></p>
+            <p>Email : <a href="mailto:contact@devis-reno-concept.com">contact@devis-reno-concept.com</a></p>
+        </address>
+
+        <a href="#" class="back-to-top">Retour en haut</a>
+    </div>
+</footer>
+
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('Service Worker enregistré.', reg))
+        .catch(err => console.error('Erreur Service Worker:', err));
+}
+</script>
+<script src="main.js"></script>
+</body>
+</html>

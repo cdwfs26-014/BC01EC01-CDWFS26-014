@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Devis Rénovation Concept | Travaux & Rénovation</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Devis Rénovation Concept : peinture, isolation, ravalement et rénovation. Demandez votre devis gratuitement.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="img/flavicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#contenu" class="skip-link">Aller au contenu</a>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <h1 class="logo">Devis Rénovation Concept</h1>
+
+        <nav class="main-nav" id="menu" aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html" aria-current="page">Accueil</a></li>
+                <li><a href="prestation.html">Prestations</a></li>
+                <li><a href="index.html#tarifs">Tarifs</a></li>
+            </ul>
+        </nav>
+
+        <button class="burger"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+                aria-controls="menu">
+            ☰
+        </button>
+    </div>
+</header>
+
+<main id="contenu">
+    <section class="hero">
+        <div class="container">
+            <img src="img/banniere.webp" alt="Bannière Magic Home Service" class="hero-banner">
+            <h2>Artisan Peintre & Rénovation intérieure</h2>
+            <p>Peinture, isolation, enduits et ravalement de façade en Eure-et-Loir et départements voisins. Travaux de qualité avec garantie 10 ans.</p>
+            <a href="prestation.html" class="btn-primary">Découvrir nos prestations</a>
+        </div>
+    </section>
+
+    <section class="presentation">
+        <div class="container">
+            <h2>Nos réalisations</h2>
+            <p>Découvrez quelques exemples de nos travaux de peinture, rénovation et enduits.</p>
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="img/travaux1.webp" alt="Peinture intérieure terminée">
+                    <figcaption>Peinture intérieure</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="img/travaux2.webp" alt="Isolation thermique">
+                    <figcaption>Isolation thermique</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="img/travaux3.webp" alt="Ravalement façade">
+                    <figcaption>Ravalement de façade</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="img/travaux4.webp" alt="Enduits de qualité">
+                    <figcaption>Enduits et finitions</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Nos services</h2>
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <h3>Peinture intérieure</h3>
+                    <p>Finitions soignées pour tous vos espaces.</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Isolation thermique</h3>
+                    <p>Améliorez votre confort et réduisez vos dépenses.</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Enduits</h3>
+                    <p>Préparation et lissage des surfaces.</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Ravalement & rénovation</h3>
+                    <p>Redonnez vie à vos façades.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="tarifs" id="tarifs">
+        <div class="container">
+            <h2>Tarifs indicatifs</h2>
+
+            <ul class="tarifs-list">
+                <li>Rénovation peinture, enduits, revêtements : à partir de <strong>14€ HT / m²</strong> ou <strong>45€ HT / heure</strong></li>
+                <li>Isolation complète clé en main : environ <strong>89€ HT / m²</strong> (hors fournitures)</li>
+            </ul>
+
+            <p>Les prix sont indicatifs, calculés selon la nature de votre projet, votre budget et les besoins spécifiques. Tous les tarifs main d’œuvre sont hors fournitures.</p>
+
+            <a href="prestation.html#avis" class="btn-secondary">
+                Ajouter / voir les avis
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="contact">
+    <div class="container">
+        <h2>Contactez-nous</h2>
+        <p>Pour un devis gratuit et rapide, contactez votre artisan à Chartres :</p>
+        <ul>
+            <li>Téléphone : <a href="tel:0613726366">06 13 72 63 66</a></li>
+            <li>Email : <a href="mailto:sos.peintre@gmail.com">sos.peintre@gmail.com</a></li>
+        </ul>
+        <a href="#" class="back-to-top">Retour en haut</a>
+    </div>
+</footer>
+
+
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('Service Worker enregistré.', reg))
+        .catch(err => console.error('Erreur Service Worker:', err));
+}
+</script>
+<script src="main.js"></script>
+</body>
+</html>
